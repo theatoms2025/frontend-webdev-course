@@ -1,0 +1,238 @@
+/* Global Styles */
+:root {
+  --primary-accent: #6C63FF;
+  --background-light: #f5f6fa;
+  --background-dark: #1e1e2f;
+  --text-light: #1a1a1a;
+  --text-dark: #eaeaea;
+  --glass-bg: rgba(255, 255, 255, 0.15);
+  --glass-dark: rgba(30, 30, 47, 0.25);
+  --border-radius: 16px;
+  --box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--background-light);
+  color: var(--text-light);
+  margin: 0;
+  padding: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.dark-mode {
+  background: var(--background-dark);
+  color: var(--text-dark);
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  box-shadow: var(--box-shadow);
+  margin: 2rem;
+  border-radius: var(--border-radius);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Main Layout */
+main {
+  display: grid;
+  gap: 2rem;
+  padding: 1rem 2rem;
+}
+
+/* Section Styling */
+section {
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--box-shadow);
+  transition: all 0.3s ease-in-out;
+}
+
+.dark-mode section {
+  background: var(--glass-dark);
+}
+
+section h2 {
+  color: var(--primary-accent);
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+table th, table td {
+  padding: 12px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+caption {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+/* Skills List */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li::before {
+  content: "✔️";
+  margin-right: 0.5rem;
+  color: var(--primary-accent);
+}
+
+/* Projects */
+section > div {
+  margin-top: 1rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+section > div:hover {
+  transform: scale(1.02);
+}
+
+/* Form */
+form {
+  display: grid;
+  gap: 1rem;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+  background: rgba(255,255,255,0.5);
+  backdrop-filter: blur(4px);
+}
+
+input:focus, textarea:focus {
+  border-color: var(--primary-accent);
+  outline: none;
+}
+
+/* Buttons */
+button {
+  background: var(--primary-accent);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(108, 99, 255, 0.4);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  background-color: rgba(0,0,0,0.05);
+}
+
+footer a {
+  color: var(--primary-accent);
+  margin: 0 0.5rem;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+footer a:hover {
+  color: #4e47e0;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+section {
+  animation: fadeInUp 0.8s ease-in-out;
+}
+
+/* Dark Mode Toggle Button */
+#darkToggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: var(--primary-accent);
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: var(--box-shadow);
+  transition: all 0.3s ease-in-out;
+}
+
+.profile-img {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid var(--primary-accent);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  margin-top: 1rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.profile-img:hover {
+  transform: scale(1.05);
+}
+
+form label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+table {
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.dark-mode table {
+  background-color: rgba(30, 30, 47, 0.3);
+}
+
+section h2::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 4px;
+  background: var(--primary-accent);
+  margin-top: 0.5rem;
+  border-radius: 4px;
+}

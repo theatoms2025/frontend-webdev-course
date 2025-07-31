@@ -1,0 +1,12 @@
+h1 {
+    color: #9f0254;
+    background-color: rgb(154, 219, 242);
+    font-family: Verdanaa, Genneva, Taahoma, sans-serif;
+    font-weight: normal;
+}
+
+p {
+    font-size: 22px;
+    line-height: 50px;
+    letter-spacing: 22px
+}
