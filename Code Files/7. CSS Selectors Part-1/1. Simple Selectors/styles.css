@@ -1,0 +1,53 @@
+/* Universal Selector */
+* {
+    background-color: bisque;
+    color: chocolate;
+}
+
+/* Element Selector */
+p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+/* Id Selector */
+#sub-heading {
+    color: blue;
+    background-color: #f4f4f4;
+}
+
+#another-sub-heading {
+    color: blue;
+    background-color: #f4f4f4;
+}
+
+/* Class Selector */
+.org-name {
+    color: burlywood;
+    background-color: brown;
+    font-size: 44px;
+}
+
+.btn {
+    color: bisque;
+    background-color: brown;
+}
+
+/* Descandant Selector */
+div p {
+   color: aqua; 
+   background-color: black;
+   font-size: 24px;
+}
+
+/* class selector for heading */
+/* .headings {
+    color: crimson;
+} */
+
+/* Group Selector */
+h1, h2, h3, h4, h5, h6, p {
+    color: crimson;
+}
+

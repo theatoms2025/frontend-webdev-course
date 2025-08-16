@@ -1,0 +1,16 @@
+/* Adjacent Sibling Combinator */
+h1 + p {
+    color: blue;
+}
+
+/* Child Combinator */
+div > p {
+    color: bisque;
+    background-color: brown;
+}
+
+/* Descendant Selector */
+div p {
+    color: bisque;
+    background-color: brown;
+}

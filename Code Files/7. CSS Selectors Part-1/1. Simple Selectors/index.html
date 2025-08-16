@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors Part-1</title>
+
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <h1>CSS Selectors Demo</h1>
+    <h2 class="org-name">TheAtoms</h2>
+
+    <!-- Id attributes -->
+    <h3 id="sub-heading">The Ultimate</h3>
+    <h3 id="sub-heading">Frontend Web Dev Course</h3>
+
+    <p>In this course, you will learn html, css, js, react, git, github, terminal</p>
+
+    <!-- Class attributes -->
+    <button class="btn">Start</button>
+    <button class="btn">Stop</button>
+    <button class="btn">Stop</button>
+    <button class="btn">Stop</button>
+    <button class="btn">Stop</button>
+    <button class="btn">Stop</button>
+
+    <!-- Descendant Selector -->
+    <div>
+        <p>I am a frontend developer</p>
+
+        <div>
+            <p>I am inner paragraph</p>
+
+            <div>
+                <p>I am inner inner paragraph</p>
+
+                <span>
+                    <p>I am a paragraph inside span</p>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Group Selector -->
+    <h1>I am h1</h1>
+    <h2>I am h2</h2>
+    <h3>I am h3</h3>
+    <h4>I am h4</h4>
+    <h5>I am h5</h5>
+    <h6>I am h6</h6>
+
+
+    <form action="">
+        <label for="username">Username</label>
+        <input type="text" id="username">
+    </form>
+    
+    <script>
+        // Id
+        console.log("this is for id attribute");
+        let subHeading = document.getElementById("sub-heading");
+        console.log(subHeading);
+        console.log(subHeading.innerText);
+
+        console.log("--------------------");
+
+        // Class
+        console.log("this is for class attribute");
+        let btn = document.getElementsByClassName("btn");
+        console.log(btn);
+
+        for (let i = 0 ; i < btn.length ; i++) {
+            console.log(btn[i]);
+            console.log(btn[i].innerText)
+        }
+    </script>
+</body>
+</html>
